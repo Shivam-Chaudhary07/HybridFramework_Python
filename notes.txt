@@ -1,0 +1,38 @@
+to run tests on desired browser
+pytest -v -s filename.py --browser broswer-name
+
+to run tests inn parallel
+pytest -v -s -n=(no of tests caes to be run in parallel) filename.py --browser broswer-name
+
+to create report
+pytest -v -s --html=file path filename.py
+
+to run Sanity/Regression TCs
+#Sanity and Regression >> if you want to run both
+#Sanity or Regression >> if you want ot run any of the TC
+
+pytest -v -s im "Sanity/Regression" --html=../Reports/Sanity.html folderName/ (as it will pick all the TC in folder )
+
+to comment out a line in batch file use REM and then write command
+
+to remove marker warning of pytest either use below command or update marker in pytest.ini file
+pytest -s test.py -m marker_name --disable-warnings
+
+
+GIT AND JENKINS:-
+
+1 - create local git repository for your project
+    >> go to folder and select GIT bash , run git init (created empty git repo on the path)
+
+2- connecting github and git
+    a >> create a repo in github and use its URL (https://github.com/Shivam-Chaudhary07/HybridFramework_Python.git)
+    b >> git remote add origin URL
+
+3 - to commit first time we need to run config commands
+    >> git config --global user.name "Shivam-Chaudhary07"
+    >> git config --global user.email "email"
+
+4 - to commit our code to local git
+    >> we need to first move our code/folders to staging area (add cmnd)
+    >> then we move from staging area to local git (commit cmnd)
+    >> git add -A (to add all the files to repo)
