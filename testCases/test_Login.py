@@ -15,7 +15,7 @@ class Test_001_Login:
     log = LogGen.loggen()
     log.info('Start logs')
 
-    @pytest.mark.regression
+    @pytest.mark.sanity
     def test_01_HomePageTitle(self):
 
 
@@ -36,7 +36,7 @@ class Test_001_Login:
                 assert False
 
 
-
+    @pytest.mark.regression
     def test_02_login(self, setup):
         self.driver = setup
         self.driver.get(self.baseURL)

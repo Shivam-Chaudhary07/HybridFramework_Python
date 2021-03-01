@@ -13,6 +13,7 @@ class Test_Log:
     log = LogGen.loggen()
     log.info("Start Logs")
 
+    @pytest.mark.sanity
     def test_logStart(self):
 
         self.driver = webdriver.Chrome()
